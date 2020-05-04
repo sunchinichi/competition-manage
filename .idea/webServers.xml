@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1bb909e1-c5e5-4f2e-b60f-3130ff25b38d" name="competition-manage">
+        <fileTransfer rootFolder="/home/bitnami/addons" accessType="SFTP" host="192.168.80.200" port="22" sshConfigId="432c8449-9c4c-4372-926b-684d75facfe2" sshConfig="bitnami@192.168.80.200:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

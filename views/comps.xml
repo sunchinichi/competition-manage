@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- 創建列表示圖 explicit list view definition  -->
+		<record model="ir.ui.view" id="competition-manage.list">
+			<field name="name">同業業績列表</field>
+			<field name="model">cm.comp</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="date"/>
+                    <field name="lee"/>
+                    <field name="levis"/>
+                    <field name="edwin"/>
+                    <field name="blueway"/>
+                    <field name="brappers"/>
+                    <field name="bobson"/>
+                    <field name="bigtrain"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- 插入6.業務文件表單視圖 -->
+
+        <!-- 插入7.搜尋視圖 -->
+        <record model="ir.ui.view" id="competition-manage.search">
+			<field name="name">同業業績搜尋</field>
+			<field name="model">cm.comp</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name"/>
+					<field name="date"/>
+				</search>
+			</field>
+		</record>
+
+		<!-- 視窗動作 action opening views on models -->
+		<record model="ir.actions.act_window" id="competition-manage.action_window">
+			<field name="name">同業業績管理列表</field>
+			<field name="res_model">cm.comp</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<!-- 新增選單 Top menu item  -->
+		<menuitem name="同業業績管理系統" id="competition-manage.menu_root"/>
+
+		<!-- 選單類別 menu categories -->
+		<menuitem name="同業業績管理" id="competition-manage.menu_1" parent="competition-manage.menu_root"/>
+
+		<!-- 動作 actions  -->
+		<menuitem name="同業業績列表" id="competition-manage.menu_1_list" parent="competition-manage.menu_1"
+			action="competition-manage.action_window"/>
+
+    </data>
+</odoo>
