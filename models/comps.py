@@ -6,8 +6,8 @@ class ModelName (models.Model):
     _description = 'comp'
 
     # name = fields.Char('店櫃',required=True)
-    name = fields.Many2one('pos.config.name', string='POS名稱')
-    date = fields.Date()
+    name = fields.Many2one('pos.config', string='POS名稱')
+    date = fields.Date('日期', default=lambda self:fields.Date.now())
 
     lee = fields.Integer()
     lee_promotions = fields.Text(size=150)

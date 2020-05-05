@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <!-- 創建列表示圖 explicit list view definition  -->
-		<record model="ir.ui.view" id="competition-manage.list">
+		<record model="ir.ui.view" id="competition-manage.brand_form">
 			<field name="name">品牌</field>
 			<field name="model">cm.brand</field>
 			<field name="arch" type="xml">
@@ -14,7 +14,7 @@
 
 		<!-- 插入6.業務文件表單視圖 -->
 
-        <!-- 插入7.搜尋視圖 -->
+         插入7.搜尋視圖
         <record model="ir.ui.view" id="competition-manage.search">
 			<field name="name">品牌</field>
 			<field name="model">cm.brand</field>
@@ -26,7 +26,7 @@
 		</record>
 
 		<!-- 視窗動作 action opening views on models -->
-		<record model="ir.actions.act_window" id="competition-manage.action_window">
+		<record model="ir.actions.act_window" id="competition-manage.board_action_window">
 			<field name="name">品牌</field>
 			<field name="res_model">cm.brand</field>
 			<field name="view_mode">tree,form</field>
@@ -41,7 +41,7 @@
 
 		<!-- 動作 actions  -->
 		<menuitem name="品牌列表" id="competition-manage.menu_2_list" parent="competition-manage.menu_2"
-			action="competition-manage.action_window"/>
+			action="competition-manage.board_action_window"/>
 
     </data>
 </odoo>
