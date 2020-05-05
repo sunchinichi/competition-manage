@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- 創建列表示圖 explicit list view definition  -->
+		<record model="ir.ui.view" id="competition-manage.list">
+			<field name="name">品牌</field>
+			<field name="model">cm.brand</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- 插入6.業務文件表單視圖 -->
+
+        <!-- 插入7.搜尋視圖 -->
+        <record model="ir.ui.view" id="competition-manage.search">
+			<field name="name">品牌</field>
+			<field name="model">cm.brand</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name"/>
+				</search>
+			</field>
+		</record>
+
+		<!-- 視窗動作 action opening views on models -->
+		<record model="ir.actions.act_window" id="competition-manage.action_window">
+			<field name="name">品牌</field>
+			<field name="res_model">cm.brand</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+<!--		&lt;!&ndash; 新增選單 Top menu item  &ndash;&gt;-->
+<!--		<menuitem name="同業業績管理系統" id="competition-manage.menu_root"-->
+<!--				  web_icon="competition-manage,static/description/icon.png"/>-->
+
+		<!-- 選單類別 menu categories -->
+		<menuitem name="品牌管理" id="competition-manage.menu_2" parent="competition-manage.menu_root"/>
+
+		<!-- 動作 actions  -->
+		<menuitem name="品牌列表" id="competition-manage.menu_2_list" parent="competition-manage.menu_2"
+			action="competition-manage.action_window"/>
+
+    </data>
+</odoo>

@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_competition-manage_competition-manage,competition-manage.competition-manage,model_competition-manage_competition-manage,,1,1,1,0
+access_competition-manage_competition-manage,competition-manage.competition-manage,model_cm_comp,base.group_user,1,1,1,0

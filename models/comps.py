@@ -6,7 +6,7 @@ class ModelName (models.Model):
     _description = 'comp'
 
     # name = fields.Char('店櫃',required=True)
-    name = fields.Many2many('pos.config.name', string='POS名稱')
+    name = fields.Many2one('pos.config.name', string='POS名稱')
     date = fields.Date()
 
     lee = fields.Integer()

@@ -43,7 +43,8 @@
 		</record>
 
 		<!-- 新增選單 Top menu item  -->
-		<menuitem name="同業業績管理系統" id="competition-manage.menu_root"/>
+		<menuitem name="同業業績管理系統" id="competition-manage.menu_root"
+				  web_icon="competition-manage,static/description/icon.png"/>
 
 		<!-- 選單類別 menu categories -->
 		<menuitem name="同業業績管理" id="competition-manage.menu_1" parent="competition-manage.menu_root"/>
