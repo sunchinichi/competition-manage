@@ -3,13 +3,13 @@
     <data>
 
         <!-- 創建列表示圖 explicit list view definition  -->
-		<record model="ir.ui.view" id="competition-manage.list">
-			<field name="name">同業業績列表</field>
-			<field name="model">cm.comp</field>
-			<field name="arch" type="xml">
-				<tree>
-					<field name="name"/>
-					<field name="date"/>
+        <record model="ir.ui.view" id="competition-manage.list">
+            <field name="name">同業業績列表</field>
+            <field name="model">cm.comp</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="date"/>
                     <field name="lee"/>
                     <field name="levis"/>
                     <field name="edwin"/>
@@ -17,41 +17,100 @@
                     <field name="brappers"/>
                     <field name="bobson"/>
                     <field name="bigtrain"/>
-				</tree>
-			</field>
-		</record>
+                </tree>
+            </field>
+        </record>
 
-		<!-- 插入6.業務文件表單視圖 -->
+        <!-- 業務文檔表單視圖 -->
+        <record model="ir.ui.view" id="competition-manage.form">
+            <field name="name">同業業績每日表單</field>
+            <field name="model">cm.comp</field>
+            <field name="arch" type="xml">
+                <form>
+                    <!-- 增加表身內容  -->
+                    <shell>
+                        <group name="group_top" col="2">
+                            <group name="group_left">
+                                <field name="name"/>
+                                <field name="date"/>
+                                <field name="rank"/>
+                                <field name="lee"/>
+                                <field name="lee_promotions"/>
+                            </group>
+                            <group name="group_right">
+                                <field name="levis"/>
+                                <field name="levis_promotions"/>
+                                <field name="edwin"/>
+                                <field name="edwin_promotions"/>
+                                <field name="blueway"/>
+                                <field name="blueway_promotions"/>
+                                <field name="brappers"/>
+                                <field name="brappers_promotions"/>
+                                <field name="bobson"/>
+                                <field name="bobson_promotions"/>
+                                <field name="bigtrain"/>
+                                <field name="bigtrain_promotions"/>
+                            </group>
+                        </group>
+                    </shell>
+                </form>
+            </field>
+        </record>
 
         <!-- 插入7.搜尋視圖 -->
         <record model="ir.ui.view" id="competition-manage.search">
-			<field name="name">同業業績搜尋</field>
-			<field name="model">cm.comp</field>
-			<field name="arch" type="xml">
-				<search>
-					<field name="name"/>
-					<field name="date"/>
-				</search>
-			</field>
-		</record>
+            <field name="name">同業業績搜尋</field>
+            <field name="model">cm.comp</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="date"/>
+                </search>
+            </field>
+        </record>
 
-		<!-- 視窗動作 action opening views on models -->
-		<record model="ir.actions.act_window" id="competition-manage.action_window">
-			<field name="name">同業業績管理列表</field>
-			<field name="res_model">cm.comp</field>
-			<field name="view_mode">tree,form</field>
-		</record>
+        <!-- 長條圖視圖 -->
+        <record model="ir.ui.view" id="competition-manage.view_graph">
+            <field name="name">同業業績長條圖</field>
+            <field name="model">cm.comp</field>
+            <field name="arch" type="xml">
+                <graph type="bar">
+                    <field name="name"/>
+                    <field name="date" type="measure"/>
+                </graph>
+            </field>
+        </record>
 
-		<!-- 新增選單 Top menu item  -->
-		<menuitem name="同業業績管理系統" id="competition-manage.menu_root"
-				  web_icon="competition-manage,static/description/icon.png"/>
+        <!-- 樞紐視圖 -->
+        <record model="ir.ui.view" id="competition-manage.view_pivot">
+            <field name="name">同業業績樞紐分析</field>
+            <field name="model">cm.comp</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="name"/>
+                    <field name="date" type="measure"/>
+                </pivot>
+            </field>
+        </record>
 
-		<!-- 選單類別 menu categories -->
-		<menuitem name="同業業績管理" id="competition-manage.menu_1" parent="competition-manage.menu_root"/>
+        <!-- 視窗動作 action opening views on models -->
+        <record model="ir.actions.act_window" id="competition-manage.action_window">
+            <field name="name">同業業績管理列表</field>
+            <field name="res_model">cm.comp</field>
+            <field name="view_mode">tree,form,pivot,graph</field>
+        </record>
 
-		<!-- 動作 actions  -->
-		<menuitem name="同業業績列表" id="competition-manage.menu_1_list" parent="competition-manage.menu_1"
-			action="competition-manage.action_window"/>
+        <!-- 新增選單 Top menu item  -->
+        <menuitem name="同業業績管理系統" id="competition-manage.menu_root"
+                  web_icon="competition-manage,static/description/icon.png"/>
+
+        <!-- 選單類別 menu categories -->
+        <menuitem name="同業業績管理" id="competition-manage.menu_1" parent="competition-manage.menu_root"/>
+
+
+        <!-- 動作 actions  -->
+        <menuitem name="同業業績列表" id="competition-manage.menu_1_list" parent="competition-manage.menu_1"
+                  action="competition-manage.action_window"/>
 
     </data>
 </odoo>
