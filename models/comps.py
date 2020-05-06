@@ -26,3 +26,5 @@ class ModelName (models.Model):
     bigtrain_promotions = fields.Text(size=150, string='BigTrain活動')
     JohnHerny = fields.Integer('JohnHerny業績')
     JohnHerny_promotions = fields.Text(size=150, string='JohnHerny活動')
+
+    brand_ids = fields.Many2many('cm.brand', string='同業品牌')

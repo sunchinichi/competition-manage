@@ -32,7 +32,6 @@
                     <shell>
                         <group name="group_top" col="2">
                             <group name="group_left">
-                                <h3>本櫃資料輸入</h3>
                                 <field name="name"/>
                                 <field name="date"/>
                                 <field name="rank"/>
@@ -40,7 +39,6 @@
                                 <field name="lee_promotions"/>
                             </group>
                             <group name="group_right">
-                                <h3>同業業績、活動輸入</h3>
                                 <field name="levis"/>
                                 <field name="levis_promotions"/>
                                 <field name="edwin"/>
@@ -58,6 +56,7 @@
                             </group>
                         </group>
                     </shell>
+                    <field name="brand_ids"/>
                 </form>
             </field>
         </record>
