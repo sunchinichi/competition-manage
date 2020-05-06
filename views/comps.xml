@@ -17,6 +17,7 @@
                     <field name="brappers"/>
                     <field name="bobson"/>
                     <field name="bigtrain"/>
+                    <field name="JohnHerny"/>
                 </tree>
             </field>
         </record>
@@ -31,6 +32,7 @@
                     <shell>
                         <group name="group_top" col="2">
                             <group name="group_left">
+                                <h3>本櫃資料輸入</h3>
                                 <field name="name"/>
                                 <field name="date"/>
                                 <field name="rank"/>
@@ -38,6 +40,7 @@
                                 <field name="lee_promotions"/>
                             </group>
                             <group name="group_right">
+                                <h3>同業業績、活動輸入</h3>
                                 <field name="levis"/>
                                 <field name="levis_promotions"/>
                                 <field name="edwin"/>
@@ -50,6 +53,8 @@
                                 <field name="bobson_promotions"/>
                                 <field name="bigtrain"/>
                                 <field name="bigtrain_promotions"/>
+                                <field name="JohnHerny"/>
+                                <field name="JohnHerny_promotions"/>
                             </group>
                         </group>
                     </shell>
@@ -97,7 +102,7 @@
         <record model="ir.actions.act_window" id="competition-manage.action_window">
             <field name="name">同業業績管理列表</field>
             <field name="res_model">cm.comp</field>
-            <field name="view_mode">tree,form,pivot,graph</field>
+            <field name="view_mode">tree,form,graph,pivot</field>
         </record>
 
         <!-- 新增選單 Top menu item  -->

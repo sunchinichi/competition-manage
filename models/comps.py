@@ -24,3 +24,5 @@ class ModelName (models.Model):
     bobson_promotions = fields.Text(size=150, string='Bobson活動')
     bigtrain = fields.Integer('BigTrain業績')
     bigtrain_promotions = fields.Text(size=150, string='BigTrain活動')
+    JohnHerny = fields.Integer('JohnHerny業績')
+    JohnHerny_promotions = fields.Text(size=150, string='JohnHerny活動')
